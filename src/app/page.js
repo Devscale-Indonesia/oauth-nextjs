@@ -1,3 +1,5 @@
+import { loginWithGoogle } from "@/actions/auth/sign.google";
+
 export default function Page() {
   return (
     <main className="flex justify-center items-center h-screen">
@@ -6,7 +8,9 @@ export default function Page() {
           <h1>Login</h1>
           <p>Please continue to login</p>
         </section>
-        <button>Sign in with Google</button>
+        <form action={loginWithGoogle}>
+          <button>Sign in with Google</button>
+        </form>
       </div>
     </main>
   );
